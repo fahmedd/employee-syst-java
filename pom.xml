@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ffloyds</groupId>
-	<artifactId>EmployeeSystemApplicationLloyds</artifactId>
+	<artifactId>employee-syst-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>EmployeeSystemApplicationLloyds</name>
-	<description>Demo emplyee project for Spring Boot</description>
+	<name>EmployeeSystem</name>
+	<description>employee project</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
