@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- status="WARN" is used internally by log4j2, levels set for log file and console can't be lower than this -->
+<Configuration status="WARN" strict="true">
+
+	<Properties>
+		<!-- defines a variable filename which can be used in the rest of the file in place of a full file name and path -->
+		<Property name="filename">./appLog.log</Property>
+	</Properties>
+
+	<!-- appenders send log messages to a particular destination -->
+	<Appenders>
+		<!-- send log messages to the console -->
+		<Appender type="Console" name="Console">
+			<!-- defines format of log message, can be customised -->
+			<Layout type="PatternLayout" pattern="%d{DATE} [%t] %-5level %logger{36} - %msg%n" />
+		</Appender>
+		<!-- send log messages to the log file -->
+		<Appender type="File" name="File" fileName="${filename}">
+			<Layout type="PatternLayout" pattern="%d{DATE} [%t] %-5level %logger{36} - %msg%n" />
+		</Appender>
+	</Appenders>
+
+	<Loggers>
+		<!-- level="trace" defines default level used by all appenders unless otherwise specified -->
+		<Root level="trace">
+			<!-- send logs to both the console and the log file -->
+			<!-- <AppenderRef ref="File" level="warn"/> -->  <!-- level="warn" sets the log file appender to warn level -->
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+
+</Configuration>
